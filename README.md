@@ -39,7 +39,7 @@ With this app, you can:
 
 - Enter the name of a product  
 -  Choose the amount in grams  
-- See how many **calories**, **proteins**, **fats**, and **carbs** it contains
+- See how many **proteins**, **fats**, and **carbs** it contains
 
 ---
 
@@ -57,7 +57,8 @@ With this app, you can:
 
 - JavaScript  
 - HTML  
-- CSS  
+- CSS
+- API
 
 ---
 
