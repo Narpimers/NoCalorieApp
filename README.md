@@ -45,11 +45,11 @@ With this app, you can:
 
 ## Example Output
 
-| Product Name     | Amount (g) | Calories | Protein (g) | Fat (g) | Carbs (g) |
-|------------------|------------|----------|-------------|---------|-----------|
-| Chicken Breast   | 150        | 165      | 31          | 3.6     | 0         |
-| Rice (boiled)    | 100        | 130      | 2.7         | 0.3     | 28        |
-| Avocado          | 50         | 80       | 1           | 7.4     | 4.2       |
+| Product Name     | Amount (g) | Protein (g) | Fat (g) | Carbs (g) |
+|------------------|------------|-------------|---------|-----------|
+| Chicken Breast   | 150        | 31          | 3.6     | 0         |
+| Rice (boiled)    | 100        | 2.7         | 0.3     | 28        |
+| Avocado          | 50         | 1           | 7.4     | 4.2       |
 
 ---
 
