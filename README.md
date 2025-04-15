@@ -33,7 +33,7 @@ Your body needs the **right balance of protein, fats, and carbs** every day. If 
 
 ##  What This App Does
 
-This app uses the [FatSecret API](https://platform.fatsecret.com/) to get nutrition information about different foods.
+This app uses the [CalorieNinjas API](https://calorieninjas.com/) to get nutrition information about different foods.
 
 With this app, you can:
 
