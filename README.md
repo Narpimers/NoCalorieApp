@@ -1,8 +1,8 @@
 # No CalorieApp
 
-##  About the Project
+## About the Project
 
-Hi! I'm someone who struggles with extra weight and often goes on diets. Of course, I usually fail — but that’s another story. 
+Hi! I'm someone who struggles with extra weight and often goes on diets. Of course, I usually fail — but that’s another story.
 
 If you ask a nutritionist how to lose weight, they’ll tell you one important thing:  
 **You need a calorie deficit** — that means consuming fewer calories than your body uses. This helps your body burn fat instead of storing it.
@@ -31,14 +31,14 @@ Your body needs the **right balance of protein, fats, and carbs** every day. If 
 
 ---
 
-##  What This App Does
+## What This App Does
 
 This app uses the [CalorieNinjas API](https://calorieninjas.com/) to get nutrition information about different foods.
 
 With this app, you can:
 
 - Enter the name of a product  
--  Choose the amount in grams  
+- Choose the amount in grams  
 - See how many **proteins**, **fats**, and **carbs** it contains
 
 ---
