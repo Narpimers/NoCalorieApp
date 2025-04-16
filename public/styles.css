@@ -1,0 +1,102 @@
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", system-ui;;
+}
+/*
+    setting up font-sizing
+*/
+h1 {
+    font-size: 5.4rem;
+}
+h2 {
+    font-size: 3.8rem;
+}
+h3 {
+    font-size: 3rem;
+}
+p {
+    font-size: 2.6rem;
+}
+/*
+    setting up global classes
+*/
+body {
+    background-color: #EFEEE9;
+    height: 100vh;
+    
+}
+#app {
+    margin-top: 5rem;
+    text-align: center;
+    align-items: center;
+
+}
+
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}
+
+/*
+    button settings
+*/
+
+button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+/*
+    Table settings
+*/
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto; 
+    font-size: 1.6rem;
+}
+
+.table td, th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    padding: 1rem 3rem; 
+}
+
+
+.table .tBody{
+    border-color: inherit;
+    text-align: left;
+    vertical-align: top;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2rem;
+    background: none;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+
+input::placeholder {
+    transition: color 0.3s ease, font-size 0.5s ease;
+}
+
+.input-error::placeholder {
+    color: rgb(206, 23, 23);
+    font-size: 1.05em;
+    transition: all 0.5s ease;
+}
