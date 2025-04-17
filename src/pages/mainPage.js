@@ -6,7 +6,7 @@ import { trGenerator } from "../containers/createElementFunction.js";
 export const initMainPage = () => {
     const app = document.getElementById("app");
     const logo = document.createElement('h1');
-    logo.innerHTML = "No CalorieApp";
+    logo.innerHTML = `<span id = "noText">No</span>CalorieApp`;
 
     //Search inputs
     const foodInput = document.createElement('input');

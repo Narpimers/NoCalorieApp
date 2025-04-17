@@ -30,8 +30,13 @@ body {
     height: 100vh;
     
 }
+
+#noText {
+    color: rgb(255, 123, 0);
+}
 #app {
-    margin-top: 5rem;
+
+    margin-top: 10%;
     text-align: center;
     align-items: center;
 
@@ -50,7 +55,7 @@ body {
 
 button {
     color: black;
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 3.6rem;
     height: 3.6rem;
     border-radius: 50%;
@@ -106,7 +111,6 @@ input::placeholder {
 
 
 @media screen and (max-width: 1100px) {
-
 
     h1 {
         font-size: 2.4rem;
