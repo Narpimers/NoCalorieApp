@@ -1,4 +1,5 @@
 import { fetchData } from "../api/fetcher.js";
+import { storeData } from "../containers/addRowFunction.js";
 import { createElement } from "../containers/createElementFunction.js";
 import { trGenerator } from "../containers/createElementFunction.js";
 
@@ -12,10 +13,11 @@ export const initMainPage = () => {
     const gramInput = document.createElement('input');
     foodInput.placeholder = "product...";
     gramInput.placeholder = "gram...";
+    gramInput.type = "number";
 
     // button
     const button = document.createElement("button");
-    button.innerHTML = "+";
+    button.innerHTML = "add";
 
     //Table part
     const table = document.createElement("table");
@@ -28,16 +30,18 @@ export const initMainPage = () => {
         <th class="tBody">Sugar</th>
         <th class="tBody">Protein</th>
         <th class="tBody">Fats</th>
-        <th class="tBody">Carbohydrates</th>
+        <th class="tBody">Carbs</th>
     </tr>
   </thead>
 <tbody>
 </tbody>`;
 
+
+// button eventListener 
 button.addEventListener("click", async () => {
 
     // 'Write a name' styling
-    if (!foodInput.value) {
+    if (!foodInput.value || !gramInput.value) {
         foodInput.classList.add("input-error");
         gramInput.classList.add("input-error");
     
@@ -45,16 +49,18 @@ button.addEventListener("click", async () => {
             foodInput.classList.remove("input-error");
             gramInput.classList.remove("input-error");
         }, 500);
-    
+
         return;
-    }
+    } 
+
+    foodInput.classList.remove("input-error");
 
     // get data
-    foodInput.classList.remove("input-error");
     try {
         const response = await fetchData(foodInput.value); 
         const data = await response.json();
-        console.log(data);
+        storeData(data, gramInput.value);
+
 
     } catch (error) {
         app.innerHTML = '';
