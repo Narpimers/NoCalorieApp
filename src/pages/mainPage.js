@@ -60,6 +60,8 @@ button.addEventListener("click", async () => {
         const response = await fetchData(foodInput.value); 
         const data = await response.json();
         storeData(data, gramInput.value);
+        gramInput.value = "";
+        foodInput.value = "";
 
 
     } catch (error) {
