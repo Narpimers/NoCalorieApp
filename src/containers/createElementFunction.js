@@ -6,7 +6,7 @@ export const createElement = (element, parentName ) => {
 }
 
 export const trGenerator = (name, gram, sugar, protein, fats, carbohydrates) => {
-    const tBody = document.querySelector('tbody');
+    const tBody = document.querySelector("tbody");
     const tr = document.createElement("tr");
     tr.className = name;
 

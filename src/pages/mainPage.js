@@ -1,5 +1,6 @@
 import { fetchData } from "../api/fetcher.js";
 import { storeData } from "../containers/addRowFunction.js";
+import { totalAmount } from "../containers/addRowFunction.js";
 import { createElement } from "../containers/createElementFunction.js";
 import { trGenerator } from "../containers/createElementFunction.js";
 
@@ -33,8 +34,19 @@ export const initMainPage = () => {
         <th class="tBody">Carbs</th>
     </tr>
   </thead>
+
 <tbody>
-</tbody>`;
+</tbody>
+
+<tbody class="totalTbody">
+    <th class="total">Total</th>
+    <th class="totalGram"></th>
+    <th class="totalSugar"></th>
+    <th class="totalProt"></th>
+    <th class="totalFat"></th>
+    <th class="totalCarbs"></th>
+</tbody>
+`;
 
 
 // button eventListener 
@@ -62,6 +74,7 @@ button.addEventListener("click", async () => {
         storeData(data, gramInput.value);
         gramInput.value = "";
         foodInput.value = "";
+        totalAmount();
 
 
     } catch (error) {
