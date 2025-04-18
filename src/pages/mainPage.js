@@ -1,10 +1,11 @@
+
 import { fetchData } from "../api/fetcher.js";
 import { storeData } from "../containers/addRowFunction.js";
 import { totalAmount } from "../containers/addRowFunction.js";
-import { createElement } from "../containers/createElementFunction.js";
-import { trGenerator } from "../containers/createElementFunction.js";
+import { initErrorPage } from "./errorPage.js";
 
 export const initMainPage = () => {
+    
     const app = document.getElementById("app");
     const logo = document.createElement('h1');
     logo.innerHTML = `<span id = "noText">No</span>CalorieApp`;
@@ -78,10 +79,8 @@ button.addEventListener("click", async () => {
 
 
     } catch (error) {
-        app.innerHTML = '';
-        app.innerHTML =  `
-        <h2> Error with data</h2>
-        `;
+        initErrorPage();
+
     }
 
 });
@@ -92,5 +91,6 @@ button.addEventListener("click", async () => {
     app.appendChild(gramInput);
     app.appendChild(button);
     app.appendChild(table);
+    console.log('Main');
 
 }
