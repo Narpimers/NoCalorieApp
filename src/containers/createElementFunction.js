@@ -1,8 +1,6 @@
 export const createElement = (element, parentName ) => {
-    if (condition) {
-        
-    }
     parentName.appendChild(document.createElement(`${element}`));
+
 }
 
 export const trGenerator = (name, gram, sugar, protein, fats, carbohydrates) => {
@@ -25,8 +23,25 @@ export const trGenerator = (name, gram, sugar, protein, fats, carbohydrates) => 
         td.innerHTML = item.value;
         tr.appendChild(td);
     });
-
+    addRemoveButton(tr);
     tBody.appendChild(tr);
     return tr;
+
+};
+
+
+export const addRemoveButton = (parentName) => {
+    const removeButton = document.createElement("button");
+    removeButton.className = "removeButton";
+    removeButton.innerText = "-";
+
+    removeButton.addEventListener("click", () => {
+        parentName.remove();
+        if (typeof totalAmount === "function") {
+            totalAmount();
+        }
+    });
+
+    parentName.appendChild(removeButton);
 
 };

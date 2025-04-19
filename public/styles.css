@@ -54,6 +54,8 @@ body {
     button settings
 */
 
+
+
 button {
     color: black;
     font-size: 0.9rem;
@@ -61,6 +63,15 @@ button {
     height: 3.6rem;
     border-radius: 50%;
 }
+
+.removeButton {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    padding-top: 0.2rem;
+}
+
 
 /*
     Table settings
@@ -120,9 +131,9 @@ input::placeholder {
 .buttonGoMain {
     font-size: 2rem;
     margin-top: 10rem;
-    border-radius: 30%;
-    height: 9rem;
-    width: 10rem;
+    border-radius: 1rem;
+    height: 6rem;
+    width: 20rem;
     color: rgb(255, 123, 0);
     transition: background-color 0.2s ease;
 }

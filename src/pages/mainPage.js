@@ -50,7 +50,15 @@ export const initMainPage = () => {
 `;
 
 
-// button eventListener 
+// button eventListener
+
+document.querySelectorAll('.removeButton').forEach(button => {
+    button.addEventListener('click', function() {
+      this.parentElement.remove();
+    });
+  });
+
+
 button.addEventListener("click", async () => {
 
     // 'Write a name' styling
@@ -82,6 +90,7 @@ button.addEventListener("click", async () => {
         initErrorPage();
 
     }
+
 
 });
 
