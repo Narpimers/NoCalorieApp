@@ -1,12 +1,15 @@
 html {
     font-size: 62.5%;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Press Start 2P", system-ui;;
 }
+
+
 /*
     setting up font-sizing
 */
@@ -22,6 +25,8 @@ h3 {
 p {
     font-size: 2.6rem;
 }
+
+
 /*
     setting up global classes
 */
@@ -53,9 +58,6 @@ body {
 /*
     button settings
 */
-
-
-
 button {
     color: black;
     font-size: 0.9rem;
@@ -76,7 +78,6 @@ button {
 /*
     Table settings
 */
-
 .table {
     border-spacing: 0.2rem;
     margin: 0 auto; 
@@ -102,10 +103,10 @@ thead tr{
     vertical-align: top;
 }
 
+
 /*
     input style 
 */
-
 input {
     border: none;
     border-bottom: 1px solid black;
@@ -114,8 +115,6 @@ input {
     text-align: center;
     padding: 0.5rem;
 }
-
-
 
 input::placeholder {
     transition: color 0.3s ease, font-size 0.5s ease;

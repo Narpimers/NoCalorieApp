@@ -17,22 +17,16 @@ export const storeData = (data, currentG) => {
 
 
 export const totalAmount = () => {
-    // get all NodeList from table
-    const nodeListGr = document.querySelectorAll(".tGram");
-    const nodeListSug = document.querySelectorAll( ".tSugar");
-    const nodeListPr = document.querySelectorAll(".tProtein");
-    const nodeListFat = document.querySelectorAll(".tFats");
-    const nodeListCar = document.querySelectorAll(".tCarbohydrates");
 
     // from Node to array
     const turnToArray = (nodeList) => 
     Array.from(nodeList).map(node => parseFloat(node.textContent)|| 0);
 
-    const gramsArray = turnToArray(nodeListGr);
-    const sugarArray = turnToArray(nodeListSug);
-    const proteinArray = turnToArray(nodeListPr);
-    const fatsArray = turnToArray(nodeListFat);
-    const carbsArray = turnToArray(nodeListCar);
+    const gramsArray = turnToArray(document.querySelectorAll(".tGram"));
+    const sugarArray = turnToArray(document.querySelectorAll( ".tSugar"));
+    const proteinArray = turnToArray( document.querySelectorAll(".tProtein"));
+    const fatsArray = turnToArray(document.querySelectorAll(".tFats"));
+    const carbsArray = turnToArray(document.querySelectorAll(".tCarbohydrates"));
 
     const getTotal = (arr) => arr.reduce((sum, val) => sum + val, 0);
 

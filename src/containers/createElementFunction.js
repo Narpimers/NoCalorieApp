@@ -1,3 +1,5 @@
+import { totalAmount } from "./addRowFunction.js";
+
 export const createElement = (element, parentName ) => {
     parentName.appendChild(document.createElement(`${element}`));
 
@@ -37,11 +39,8 @@ export const addRemoveButton = (parentName) => {
 
     removeButton.addEventListener("click", () => {
         parentName.remove();
-        if (typeof totalAmount === "function") {
-            totalAmount();
-        }
+        totalAmount();
     });
 
     parentName.appendChild(removeButton);
-
 };
