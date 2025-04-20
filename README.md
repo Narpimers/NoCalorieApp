@@ -17,16 +17,16 @@ So, in this project, I want to focus only on **food and nutrition**.
 
 There’s a problem with only counting calories:
 
-- It can lead to **binge eating**  
-- It can cause **self-aggression** when you "fail"  
+- It can lead to **binge eating**
+- It can cause **self-aggression** when you "fail"
 - You may feel **hungry all the time**
 - It can **hurt your health** and lead to stress
 
 That’s why it’s better to focus on **mindful eating**.  
 Your body needs the **right balance of protein, fats, and carbs** every day. If you eat balanced meals, you will probably:
 
-- Feel more satisfied  
-- Be less hungry  
+- Feel more satisfied
+- Be less hungry
 - Stay healthier in the long term
 
 ---
@@ -37,26 +37,26 @@ This app uses the [CalorieNinjas API](https://calorieninjas.com/api) to get nutr
 
 With this app, you can:
 
-- Enter the name of a product  
-- Choose the amount in grams  
+- Enter the name of a product
+- Choose the amount in grams
 - See how many **proteins**, **fats**, and **carbs** it contains
 
 ---
 
 ## Example Output
 
-| Product Name     | Amount (g) | Protein (g) | Fat (g) | Carbs (g) |
-|------------------|------------|-------------|---------|-----------|
-| Chicken Breast   | 150        | 31          | 3.6     | 0         |
-| Rice (boiled)    | 100        | 2.7         | 0.3     | 28        |
-| Avocado          | 50         | 1           | 7.4     | 4.2       |
+| Product Name   | Amount (g) | Protein (g) | Fat (g) | Carbs (g) |
+| -------------- | ---------- | ----------- | ------- | --------- |
+| Chicken Breast | 150        | 31          | 3.6     | 0         |
+| Rice (boiled)  | 100        | 2.7         | 0.3     | 28        |
+| Avocado        | 50         | 1           | 7.4     | 4.2       |
 
 ---
 
 ## 💻 Technologies Used
 
-- JavaScript  
-- HTML  
+- JavaScript
+- HTML
 - CSS
 - API
 

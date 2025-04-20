@@ -1,8 +1,7 @@
-import {initMainPage} from "./pages/mainPage.js";
+import { initMainPage } from "./pages/mainPage.js";
 
 function loadApp() {
-    initMainPage();
+  initMainPage();
 }
 
-window.addEventListener('load', loadApp);
-
+window.addEventListener("load", loadApp);
