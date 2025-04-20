@@ -2,8 +2,7 @@ import { fetchData } from "../api/fetcher.js";
 import { storeData } from "../containers/addRowFunction.js";
 import { totalAmount } from "../containers/addRowFunction.js";
 import { saveAllFromTable, getLocalData} from "../containers/localStorage.js";
-import { initErrorPage } from "./errorPage.js";
-import { trGenerator } from "../containers/createElementFunction.js";
+// import { initErrorPage } from "./errorPage.js";
 
 export const initMainPage = () => {
 
@@ -50,19 +49,14 @@ export const initMainPage = () => {
 </tbody>
 `;
 
-  // getLocalData();
-
-  // button eventListener
-
-  document.querySelectorAll(".removeButton").forEach((button) => {
-    button.addEventListener("click", function () {
-      this.parentElement.remove();
-    });
-  });
 
 // add EventListener on add button
 
   button.addEventListener("click", async () => {
+
+    if (gramInput.value.includes("-")) {
+      gramInput.value = gramInput.value.replace("-", ""); 
+    }
 
     // 'Write a name' styling
     if (!foodInput.value || !gramInput.value) {
@@ -108,11 +102,12 @@ export const initMainPage = () => {
     }
   });
 
-  
   // AppendChild
   app.appendChild(logo);
   app.appendChild(foodInput);
   app.appendChild(gramInput);
   app.appendChild(button);
   app.appendChild(table);
+  getLocalData();
+  totalAmount();
 };

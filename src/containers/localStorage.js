@@ -11,11 +11,11 @@ export function saveAllFromTable() {
         const cells = row.querySelectorAll("td");
         return {
         name: cells[0]?.textContent || "",
-        gram: parseFloat(cells[1]?.textContent) || 0,
-        sugar: parseFloat(cells[2]?.textContent) || 0,
-        protein: parseFloat(cells[3]?.textContent) || 0,
-        fats: parseFloat(cells[4]?.textContent) || 0,
-        carbohydrates: parseFloat(cells[5]?.textContent) || 0,
+        gram: cells[1]?.textContent || 0,
+        sugar: cells[2]?.textContent || 0,
+        protein: cells[3]?.textContent || 0,
+        fats: cells[4]?.textContent || 0,
+        carbohydrates: cells[5]?.textContent || 0,
         };
     });
 
@@ -43,3 +43,11 @@ export const getLocalData = () => {
   };
 
 
+export const removeItemByName = (itemName) => {
+    const localData = localStorage.getItem("calorieAppData"); 
+    if (!localData) return;
+
+    const parsedData = JSON.parse(localData);
+    console.log(parsedData);
+    
+}
