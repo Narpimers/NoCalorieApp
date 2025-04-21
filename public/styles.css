@@ -124,7 +124,7 @@ input::placeholder {
 
 
 /* 
-button stuling
+button styling
  */
 
 .buttonGoMain {
@@ -149,6 +149,35 @@ button:hover {
 
 .total {
   color: rgb(255, 123, 0);
+}
+
+/*
+ loadBar styling
+ */
+#loadingBar {
+  border: 0.2rem solid black;
+  width: 6rem;
+  height: 2rem;
+  margin: 0.5rem auto;
+  display: flex;
+}
+
+#squareOne {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+#squareTwo {
+  margin-left: 0.4rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  
+}
+
+#squareThree {
+  margin-left: 0.4rem;
+  height: 1.6rem;
+  width: 1.6rem;
 }
 
 

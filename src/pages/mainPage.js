@@ -1,7 +1,8 @@
 import { fetchData } from "../api/fetcher.js";
-import { storeData } from "../containers/addRowFunction.js";
-import { totalAmount } from "../containers/addRowFunction.js";
+import { storeData, totalAmount } from "../containers/addRowFunction.js";
 import { saveAllFromTable, getLocalData} from "../containers/localStorage.js";
+import { addLoading } from "../containers/createElementFunction.js";
+import { loadingAnimation } from "../containers/loaderFunction.js";
 // import { initErrorPage } from "./errorPage.js";
 
 export const initMainPage = () => {
@@ -52,8 +53,7 @@ export const initMainPage = () => {
 
 // add EventListener on add button
 
-  button.addEventListener("click", async () => {
-
+  button.addEventListener("click",() => {
     
     if (gramInput.value.includes("-")) {
       gramInput.value = gramInput.value.replace("-", ""); 
@@ -74,14 +74,18 @@ export const initMainPage = () => {
 
     foodInput.classList.remove("input-error");
 
-    // get data
+    // animation part
+    addLoading();
+    loadingAnimation();
+
+    setTimeout(async () => {
+          // get data
     try {
       const response = await fetchData(foodInput.value);
       const data = await response.json();
       storeData(data, gramInput.value);
       saveAllFromTable(); 
       
-
       gramInput.value = "";
       foodInput.value = "";
 
@@ -101,6 +105,8 @@ export const initMainPage = () => {
         gramInput.classList.remove("input-error");
       }, 500);
     }
+    document.getElementById("loadingBar").style.display = "none";
+    }, 2000)
   });
 
   // AppendChild
@@ -109,6 +115,7 @@ export const initMainPage = () => {
   app.appendChild(gramInput);
   app.appendChild(button);
   app.appendChild(table);
+
   getLocalData();
   totalAmount();
 };

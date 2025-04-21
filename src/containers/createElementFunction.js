@@ -1,5 +1,4 @@
 import { totalAmount } from "./addRowFunction.js";
-import { removeItemByName } from "./localStorage.js";
 
 export const createElement = (element, parentName) => {
   parentName.appendChild(document.createElement(`${element}`));
@@ -36,8 +35,7 @@ export const trGenerator = (
   sugar,
   protein,
   fats,
-  carbohydrates,
-) => {
+  carbohydrates,) => {
   const tBody = document.querySelector("tbody");
   const tr = document.createElement("tr");
   tr.className = name;
@@ -60,4 +58,27 @@ export const trGenerator = (
   addRemoveButton(tr);
   tBody.appendChild(tr);
   return tr;
+};
+
+
+export const addLoading = () => {
+  const loadingBar = document.createElement('div');
+  loadingBar.id = "loadingBar";
+
+  const loadingSquareOne = document.createElement('div');
+  loadingSquareOne.id = "squareOne";
+  loadingSquareOne.className = "loadingSquare";
+  const loadingSquareTwo = document.createElement('div');
+  loadingSquareTwo.id = "squareTwo";
+  loadingSquareTwo.className = "loadingSquare";
+  const loadingSquareThree = document.createElement('div');
+  loadingSquareThree.id = "squareThree";
+  loadingSquareThree.className = "loadingSquare";
+
+  loadingBar.appendChild(loadingSquareOne);
+  loadingBar.appendChild(loadingSquareTwo);
+  loadingBar.appendChild(loadingSquareThree);
+
+  document.querySelector('#app').appendChild(loadingBar);
+  
 };

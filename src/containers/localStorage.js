@@ -1,5 +1,4 @@
-import { trGenerator } from "./createElementFunction.js";
-import { addRemoveButton } from "./createElementFunction.js";
+import { trGenerator, addRemoveButton } from "./createElementFunction.js";
 
 export function saveAllFromTable() {
     const STORAGE_KEY = "calorieAppData";
@@ -43,11 +42,4 @@ export const getLocalData = () => {
   };
 
 
-export const removeItemByName = (itemName) => {
-    const localData = localStorage.getItem("calorieAppData"); 
-    if (!localData) return;
-
-    const parsedData = JSON.parse(localData);
-    console.log(parsedData);
-    
-}
+ 
