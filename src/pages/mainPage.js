@@ -105,7 +105,7 @@ export const initMainPage = () => {
         gramInput.classList.remove("input-error");
       }, 500);
     }
-    document.getElementById("loadingBar").style.display = "none";
+    document.getElementById("loadingBar").remove();
     }, 2000)
   });
 
