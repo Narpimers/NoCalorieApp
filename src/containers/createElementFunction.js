@@ -12,24 +12,18 @@ export const addRemoveButton = (parentName) => {
   removeButton.innerText = "-";
 
   removeButton.addEventListener("click", () => {
-    // Получаем имя продукта из строки
     const productRow = parentName;
     const productName = productRow.querySelector(".tName")?.textContent;
     const productGram = productRow.querySelector(".tGram")?.textContent;
 
-    // Удаление из localStorage
     let data = JSON.parse(localStorage.getItem("calorieAppData")) || [];
 
-    // Фильтруем массив, чтобы удалить объект с совпадающим именем и граммами
     data = data.filter(item => !(item.name === productName && item.gram === productGram));
 
-    // Обновляем localStorage
     localStorage.setItem("calorieAppData", JSON.stringify(data));
 
-    // Удаляем строку из DOM
     parentName.remove();
-
-    // Вызываем пересчёт, если нужно
+    
     totalAmount(removeButton.parentElement.className);
   });
 
@@ -67,5 +61,3 @@ export const trGenerator = (
   tBody.appendChild(tr);
   return tr;
 };
-
-

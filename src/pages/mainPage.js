@@ -54,6 +54,7 @@ export const initMainPage = () => {
 
   button.addEventListener("click", async () => {
 
+    
     if (gramInput.value.includes("-")) {
       gramInput.value = gramInput.value.replace("-", ""); 
     }
@@ -93,7 +94,7 @@ export const initMainPage = () => {
 
       foodInput.classList.add("input-error");
       gramInput.classList.add("input-error");
-      foodInput.placeholder = "can't fiend"
+      foodInput.placeholder = "can't find"
 
       setTimeout(() => {
         foodInput.classList.remove("input-error");
