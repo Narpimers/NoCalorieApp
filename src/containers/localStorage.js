@@ -1,7 +1,7 @@
 import { trGenerator, addRemoveButton } from "./createElementFunction.js";
 
 export function saveAllFromTable() {
-    const STORAGE_KEY = "calorieAppData";
+    const keyOfData = "calorieAppData";
     const rows = document.querySelectorAll(".newProduct tr");
 
     if (!rows.length) return;
@@ -18,7 +18,7 @@ export function saveAllFromTable() {
         };
     });
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    localStorage.setItem(keyOfData, JSON.stringify(data));
 }
 
 export const getLocalData = () => {
